@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Simplee – Investor Portal (Frontend)
 
-## Getting Started
+Frontend implementation of the **Investor – Final Design** Figma file (Simplee investment management platform).
+Built with **Next.js 16 (App Router)**, **React 19**, **TypeScript**, **Tailwind CSS v4**, **Recharts** and **lucide-react**.
 
-First, run the development server:
+> Frontend only: all data comes from `src/lib/data.ts` (mock data). Swap those exports for API calls when a backend is ready.
+
+## Getting started
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev        # http://localhost:3000
+npm run build && npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Screens
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+| Route | Screen |
+| --- | --- |
+| `/login` | Login (Welcome Back) |
+| `/forgot-password`, `/reset-password` | Forgot / set new password flow |
+| `/welcome` | New user invite (Welcome Aboard) |
+| `/dashboard` | Dashboard – KPIs, distribution summary, recent investments/distributions, notifications, charts |
+| `/investments` | My Investments – group by Investments/Entities, upload data, report error |
+| `/properties` | Properties list – group by All/Investments/Entities |
+| `/properties/[id]` | Property detail – gallery + lightbox, overview, description, NOI table |
+| `/distributions` | Distributions – summary, donut, amount graph, add/upload proof |
+| `/entities`, `/entities/[id]` | Entities list and detail |
+| `/sponsors` | Sponsors – stats, charts, active/inactive filter |
+| `/documents` | Documents – category filter, K1 stats, download |
+| `/manage-data` | Manage Data – upload status, comment trail, re-submit |
+| `/contacts` | Contacts |
+| `/notifications` | Notifications (mark as read) |
+| `/settings` | SMS / email notification toggles |
+| `/profile` | My Profile – edit profile, change password, entity details |
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Structure
 
-## Learn More
+```
+src/
+  app/
+    (auth)/        login, forgot/reset password, welcome – split layout with brand panel
+    (app)/         authenticated screens – sidebar layout
+  components/
+    ui.tsx         PageHeader, Button, StatCard, Panel, badges, chips, RowMenu, Modal, Toggle, Toasts
+    DataTable.tsx  useTable hook (search / sort / filter / CSV export), TableToolbar, DataTable
+    Charts.tsx     DistributionSummary, InvestmentDonut, AmountBarChart
+    Modals.tsx     Upload data, Report error, Add proof
+    Sidebar.tsx, Logo.tsx
+  lib/data.ts      mock data + types
+```
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Design tokens (Inter font, primary radial gradient `#5775E5 → #445EBE`, success/indigo/danger palettes) live in `src/app/globals.css`.
