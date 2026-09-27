@@ -58,7 +58,7 @@ export default function ProfilePage() {
           </button>
         </div>
         <div className="space-y-3">
-          <Detail label="Simplee ID" value={currentUser.id} />
+          <Detail label="Vestora ID" value={currentUser.id} />
           <Detail label="Name" value={user.name} />
           <Detail label="Email" value={user.email} />
           <Detail label="Mobile Number" value={user.phone} />

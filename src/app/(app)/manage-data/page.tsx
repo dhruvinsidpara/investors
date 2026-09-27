@@ -18,8 +18,8 @@ export default function ManageDataPage() {
   const [commentsFor, setCommentsFor] = useState<DataSet | null>(null);
   const [draft, setDraft] = useState("");
   const [threads, setThreads] = useState<Record<string, Comment[]>>({
-    m3: [{ author: "Simplee Admin", text: "Please add the Real Estate column and resubmit the file.", time: "Feb 20, 10:45 AM", admin: true }],
-    m4: [{ author: "Simplee Admin", text: "Data mapping failed for rows 12–18.", time: "Feb 19, 04:10 PM", admin: true }],
+    m3: [{ author: "Vestora Admin", text: "Please add the Real Estate column and resubmit the file.", time: "Feb 20, 10:45 AM", admin: true }],
+    m4: [{ author: "Vestora Admin", text: "Data mapping failed for rows 12–18.", time: "Feb 19, 04:10 PM", admin: true }],
   });
 
   const columns: Column<DataSet>[] = [
@@ -81,7 +81,7 @@ export default function ManageDataPage() {
           {(commentsFor && threads[commentsFor.id]?.length ? threads[commentsFor.id] : []).map((c, i) => (
             <div key={i} className="flex gap-3">
               {c.admin ? (
-                <span className="bg-primary-radial grid h-8 w-8 shrink-0 place-items-center rounded-full text-xs font-bold text-white">S</span>
+                <span className="bg-primary-radial grid h-8 w-8 shrink-0 place-items-center rounded-full text-xs font-bold text-white">V</span>
               ) : (
                 <Avatar src={currentUser.avatar} size={32} />
               )}

@@ -1,6 +1,6 @@
-# Simplee – Investor Portal (Frontend)
+# Vestora – Investor Portal (Frontend)
 
-Frontend implementation of the **Investor – Final Design** Figma file (Simplee investment management platform).
+Frontend implementation of the **Investor – Final Design** Figma file (Vestora investment management platform).
 Built with **Next.js 16 (App Router)**, **React 19**, **TypeScript**, **Tailwind CSS v4**, **Recharts** and **lucide-react**.
 
 > Frontend only: all data comes from `src/lib/data.ts` (mock data). Swap those exports for API calls when a backend is ready.

@@ -19,7 +19,7 @@ export default function WelcomePage() {
     >
       <h1 className="text-gradient text-[28px] font-bold">Welcome Aboard!</h1>
       <p className="mt-1 mb-7 text-sm leading-relaxed text-ink-2">
-        You&apos;ve been invited to Simplee. Set up your account to start tracking your investments.
+        You&apos;ve been invited to Vestora. Set up your account to start tracking your investments.
       </p>
       <div className="space-y-4">
         <Field label="Full name">

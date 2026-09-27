@@ -1,11 +1,11 @@
 import clsx from "clsx";
 
 export function LogoMark({ className, light }: { className?: string; light?: boolean }) {
-  const fill = light ? "#ffffff" : "url(#simplee-grad)";
+  const fill = light ? "#ffffff" : "url(#vestora-grad)";
   return (
     <svg viewBox="0 0 40 44" className={className} aria-hidden="true">
       <defs>
-        <radialGradient id="simplee-grad" cx="65%" cy="4%" r="141%">
+        <radialGradient id="vestora-grad" cx="65%" cy="4%" r="141%">
           <stop offset="0%" stopColor="#5775E5" />
           <stop offset="100%" stopColor="#445EBE" />
         </radialGradient>
@@ -36,7 +36,7 @@ export function Logo({ className, light, size = "md" }: { className?: string; li
           light ? "text-white" : "text-gradient",
         )}
       >
-        Simplee
+        Vestora
       </span>
     </div>
   );

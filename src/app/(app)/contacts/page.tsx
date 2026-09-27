@@ -24,7 +24,7 @@ export default function ContactsPage() {
 
   return (
     <>
-      <PageHeader title="Contacts" subtitle="List of all contacts on Simplee" />
+      <PageHeader title="Contacts" subtitle="List of all contacts on Vestora" />
       <div className="mb-5 flex flex-wrap items-center justify-between gap-3">
         <h2 className="text-base font-semibold">List of investors and their respective entities</h2>
         <TableToolbar table={table} download="contacts" />

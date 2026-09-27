@@ -41,7 +41,7 @@ export default function ForgotPasswordPage() {
       <h1 className="text-gradient text-[28px] font-bold">Forgot Password</h1>
       <p className="mt-1 mb-7 text-sm leading-relaxed text-ink-2">Enter the email linked to your account and we&apos;ll send you a reset link.</p>
       <Field label="Email ID" error={error}>
-        <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="John.Doe@simplee.com" className={inputClass} />
+        <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="John.Doe@vestora.com" className={inputClass} />
       </Field>
       <Button type="submit" className="mt-6 w-full">
         Send reset link

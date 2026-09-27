@@ -8,7 +8,7 @@ export const currentUser = {
   id: "IN001",
   name: "Hawkins Strong",
   role: "Investor",
-  email: "h.strong@simplee.com",
+  email: "h.strong@vestora.com",
   phone: "+1-541-754-3010",
   avatar:
     "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=200&h=200&fit=crop&crop=faces",
@@ -214,7 +214,7 @@ export const sponsors: Sponsor[] = Array.from({ length: 10 }, (_, i) => {
     name,
     company: i % 3 === 2 ? "Estate Brokers" : "Ace Real estate",
     recentDeal: propertyNames[i % propertyNames.length],
-    email: `${name.toLowerCase().replace(" ", ".")}@simplee.com`,
+    email: `${name.toLowerCase().replace(" ", ".")}@vestora.com`,
     phone: "+91-1234567890",
     active: i % 4 !== 3,
   };

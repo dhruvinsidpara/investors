@@ -8,7 +8,7 @@ import { Button, Field, inputClass } from "@/components/ui";
 
 export default function LoginPage() {
   const router = useRouter();
-  const [email, setEmail] = useState("John.Doe@simplee.com");
+  const [email, setEmail] = useState("John.Doe@vestora.com");
   const [password, setPassword] = useState("");
   const [show, setShow] = useState(false);
   const [remember, setRemember] = useState(true);

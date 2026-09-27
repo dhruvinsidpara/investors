@@ -8,7 +8,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Simplee – Investment Management",
+  title: "Vestora – Investment Management",
   description: "Track your investments, distributions, properties and tax documents.",
 };
 
